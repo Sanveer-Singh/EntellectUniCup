@@ -58,6 +58,7 @@
     <Compile Include="MapPoint.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TesterClass.cs" />
     <Compile Include="Utilities.cs" />
     <Compile Include="WorldHandler.cs" />
     <EmbeddedResource Include="Form1.resx">
