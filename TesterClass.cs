@@ -97,6 +97,7 @@ namespace EntellectUniCup
             {
                 if(p.GetType() == C1.GetType())
                 {
+                    C1 = (Crate)p;
                     // its a crate
                     if (C1.Name == Name)
                     {
@@ -107,7 +108,7 @@ namespace EntellectUniCup
                 if (p.GetType ()== CB.GetType ())
                 {
                     // its a crate base
-
+                    CB = (cratebase)p;
                     if (CB.name == Name)
                     {
                         // found x its a base
@@ -118,6 +119,14 @@ namespace EntellectUniCup
 
 
             return answer;
+        }
+
+        public string ToString()
+        {
+            // default return 
+            string display = "";
+            display = "Score for this is : " + Convert.ToString(TotalScore)+ Environment.NewLine  ;
+            return display;
         }
 
     }

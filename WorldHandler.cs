@@ -199,13 +199,13 @@ namespace EntellectUniCup
                 string currentLine = "";
                 double X1, Y1 = 0;
                 // loop through list
-                for (int y = 1; y <= FileLines.GetLength(0); y++)
+                for (int y = 1; y < FileLines.GetLength(0); y++)
                 {
                     // get this line without white space
                     currentLine = FileLines[y].Trim();
                     // now search for points
                     Y1 =MapHeight - y;
-                    for (int x = 0; x <= currentLine.Length; x++)
+                    for (int x = 0; x < currentLine.Length; x++)
                     {
                         X1 = x ;
                         // check if its a map point 
@@ -276,5 +276,29 @@ namespace EntellectUniCup
             return MyCratebases;
 
         }
+
+        // make a to-string to make it easy
+
+        public string toString()
+        {// default response 
+            string answer = "";
+            answer += "File name : "+FileName  + Environment.NewLine;
+            answer += "Number of worms : " + Convert.ToString (worms)  + Environment.NewLine;
+            answer += "Number of crates : " + Convert.ToString(NumCrates ) + Environment.NewLine;
+            answer += "Number of bases : " + Convert.ToString(NumBases ) + Environment.NewLine;
+            answer += "map height : " + Convert.ToString(MapHeight) + Environment.NewLine;
+            answer += "Map width  :" + Convert.ToString(MapWidth ) + Environment.NewLine;
+            answer += "Crates in list :" + Convert.ToString(Crates.Count()) + Environment.NewLine;
+            answer += "CrateBases in List :" + Convert.ToString(Bases.Count()) + Environment.NewLine;
+
+            foreach(Crate c in Crates )
+            {
+                answer += c.toString() + Environment.NewLine;
+            }
+
+            return answer;
+
+        }
+      
     }
 }
