@@ -15,19 +15,19 @@ namespace EntellectUniCup
         // get score 
         // variables 
         public string[] FileLines = null;
-        public string FileName;
+        public string TestFileName, WorldFileName1;
         public WorldHandler MyWorld;
         public double TotalScore;
 
         //constructor
-        public TesterClass( string FileName1)
+        public TesterClass( string FileName1,string WorldFileName1)
         {
             // store the file name 
-            FileName = FileName1;
+            TestFileName = FileName1;
             // make  a file handler 
             FileHandler myHandler = new FileHandler();
             // get the file lines
-            FileLines = myHandler.GetlinesArray(FileName);
+            FileLines = myHandler.GetlinesArray(TestFileName);
            
             if(FileLines is null)
             {
@@ -36,7 +36,7 @@ namespace EntellectUniCup
             }
             else
             {
-                MyWorld = new WorldHandler(FileName);
+                MyWorld = new WorldHandler(WorldFileName1);
                 // lets make a list of points to add to score 
                 List<MapPoint> pointsVisited = new List<MapPoint>();
                 double score = 0;
