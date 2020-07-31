@@ -10,5 +10,11 @@ namespace EntellectUniCup
     {
         public double x;
         public double y;
+
+        public MapPoint (double X, double Y)
+        {
+            x = X;
+            y = Y;
+        }
     }
 }

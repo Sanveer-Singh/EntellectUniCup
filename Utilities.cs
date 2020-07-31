@@ -8,10 +8,13 @@ namespace EntellectUniCup
 {
     class Utilities
     {
+        // zero point 
+
+       public static MapPoint zero0 = new MapPoint(0, 0);
         // distance calculator using manhattan
         // -1 means wrong params
         // assumes A to B
-        public double GetManhattanDistance(MapPoint A,MapPoint B)
+        public static double GetManhattanDistance(MapPoint A,MapPoint B)
         {
             double answer = -2;
             // safety check
@@ -27,19 +30,19 @@ namespace EntellectUniCup
         }
 
         // A number of alternatives that will handle casting for you 
-        public double GetManhattanDistance(Crate A,cratebase B)
+        public static double GetManhattanDistance(Crate A,cratebase B)
         {
             return GetManhattanDistance(A, B);
         }
-        public double GetManhattanDistance(cratebase A, Crate B)
+        public static double GetManhattanDistance(cratebase A, Crate B)
         {
             return GetManhattanDistance(A, B);
         }
-        public double GetManhattanDistance(Crate A, Crate B)
+        public static double GetManhattanDistance(Crate A, Crate B)
         {
             return GetManhattanDistance(A, B);
         }
-        public double GetManhattanDistance(cratebase A, cratebase B)
+        public static double GetManhattanDistance(cratebase A, cratebase B)
         {
             return GetManhattanDistance(A, B);
         }
